@@ -4,6 +4,9 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400&subset=latin,latin-ext);
+@import "compass/layout/sticky-footer";
+@import "compass/css3/transition";
+@import "compass/css3/box-shadow";
 @import "compass/reset";
 
 $primary-color: #428bca;
@@ -19,7 +22,40 @@ body {
 }
 
 .container {
+	color: white;
+	background: lighten(black, 25%);
+	border: 4px solid $primary-color;
 	margin: 0 auto;
+	margin-top: 50px;
 	min-width: 300px;
+	padding: 25px;
 	width: 50%;
+}
+
+.title {
+	font-size: 2em;
+	font-weight: 400;
+	vertical-align: middle;
+}
+
+.item-list {
+
+	margin-top: 20px;
+	margin-left: 10px;
+	li {
+		a {
+			
+			color: lighten(green, 15%);
+			text-decoration: none;
+			@include transition(color 0.3s ease-in-out);
+			&:hover {
+				color: orange;
+			}
+		}
+	}
+	
+}
+
+.item {
+	
 }
