@@ -3,4 +3,23 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400&subset=latin,latin-ext);
 @import "compass/reset";
+
+$primary-color: #428bca;
+$secondary-color: orange;
+$background-color: black;
+
+html {
+	font: 300 1.05em / 1.5em"Open Sans", serif;
+}
+
+body {
+
+}
+
+.container {
+	margin: 0 auto;
+	min-width: 300px;
+	width: 50%;
+}

@@ -1,11 +1,17 @@
-<doctype html>
+<!doctype html>
 
-<html>
+<html lang="en">
 	<head>
-		<title>{{ title }}</title>
+		<meta charset="utf-8"/>
+		<title>{{ title or "Profan's Dwelling" }}</title>
+		<link href="css/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
 	</head>
 
 	<body>
-		
+		{% block container %}
+		{% endblock %}
 	</body>
 </html>
+
+{% block tail %}
+{% endblock %}
