@@ -1,0 +1,26 @@
+{% import '_defaults.html' as def %}
+
+{% set title = "Profan's Dwelling - Past Servers" %}
+{% set current_page = 'pastservices.html' %}
+{% extends 'layout.html' %}
+
+{% block container %}
+
+<table>
+	<tr>
+		<th>Server Name</th>
+		<th>Thread Link</th>
+	</tr>
+	{% for url, title in def.past_services %}
+	<tr>
+		<td>
+			{{title}}
+		</td>
+		<td>
+			<a href="{{url}}">{{url}}</a>
+		</td>
+	</tr>
+	{% endfor %}
+</table>
+
+{% endblock %}

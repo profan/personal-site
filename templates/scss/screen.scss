@@ -30,8 +30,21 @@ a {
 	}
 }
 
+table {
+	padding: 5px;
+	font-size: 0.75em;
+	td {
+		padding-left: 10px;
+	}
+	tr:nth-child(even) {
+		background: lighten(black, 20%);
+	}
+}
+
 
 .nav {
+
+	margin-top: 10px;
 	color: $primary-color;
 
 	li {
