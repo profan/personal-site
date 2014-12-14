@@ -1,3 +1,4 @@
+{% import '_defaults.html' as def %}
 <!doctype html>
 
 <html lang="en">
@@ -7,10 +8,26 @@
 		<link href="css/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
 	</head>
 
+	{% block body %}
 	<body>
+
+		<div class="container">	
+		
 		{% block container %}
-		{% endblock %}
+		{% endblock %}		
+
+		<ul class="nav">
+			{% for url, title in def.nav %}
+				{% if current_page != url %}
+					<li><a href="{{url}}">{{title}}</a></li>
+				{% endif %}
+			{% endfor %}
+		</ul>
+
+		</div>
 	</body>
+	{% endblock %}
+
 </html>
 
 {% block tail %}

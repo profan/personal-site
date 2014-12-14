@@ -21,6 +21,27 @@ body {
 	background: lighten(black, 15%);
 }
 
+a {	
+	color: white;
+	text-decoration: none;
+	@include transition(color 0.3s ease-in-out);
+	&:hover {
+		color: orange;
+	}
+}
+
+
+.nav {
+	color: $primary-color;
+
+	li {
+		display: inline-block;
+		background: lighten(black, 20%);
+		padding: 10px;
+	}
+
+}
+
 .container {
 	@include box-shadow(rgba(orange, 0.4) 0 0 25px, rgba(green, 0.2) 0 0 3px 1px inset);
 
@@ -44,24 +65,12 @@ body {
 
 	margin-top: 20px;
 	margin-left: 10px;
-	
 	padding: 15px;
 
 	li {
-
 		padding: 5px;
 		font-size: 0.9em;
-		margin-bottom: 5px;
-		
-		a {
-			
-			color: white;
-			text-decoration: none;
-			@include transition(color 0.3s ease-in-out);
-			&:hover {
-				color: orange;
-			}
-		}
+		margin-bottom: 5px;	
 	}
 }
 
