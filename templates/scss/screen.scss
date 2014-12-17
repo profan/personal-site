@@ -81,7 +81,7 @@ table {
 	margin: 0 auto;
 	margin-top: 50px;
 	max-width: 720px;
-	min-width: 300px;
+	min-width: 360px;
 	padding: 25px;
 	width: 55%;
 }
@@ -90,6 +90,18 @@ table {
 	font-size: 2em;
 	font-weight: 400;
 	vertical-align: middle;
+}
+
+.links {
+	li {
+		margin-right: 15px;
+	}
+}
+
+@media screen and (min-width: 920px) {
+	.links li {
+		display: inline-block;
+	}
 }
 
 .item-list {
