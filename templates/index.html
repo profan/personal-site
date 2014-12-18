@@ -1,4 +1,5 @@
-﻿{% set title = "Profan's Dwelling." %}
+﻿{% import '_defaults.html' as def %}
+{% set title = "Profan's Dwelling." %}
 {% set current_page = 'index.html' %}
 {% extends 'layout.html' %}
 {% block container %}
@@ -7,9 +8,8 @@
 </span>
 <p class="personal-desc">Currently a BS Computer Science student at Stockholm University, interested in natural language processing, game development and artificial intelligence.</p>
 <ul class="item-list links">
-	<li><a href="mailto:robinhubner@gmail.com"><i class="fa fa-at fa-2x"></i><span>robinhubner@gmail.com</span></a></li>
-	<li><a href="https://keybase.io/profan"><i class="fa fa-key fa-2x"></i><span>keybase.io</span></a></li>
-	<li><a href="https://github.com/profan"><i class="fa fa-github fa-2x"></i><span>GitHub</span></a></li>
-	<li><a href="https://twitter.com/profanwolf"><i class="fa fa-twitter fa-2x"></i><span>Twitter</span></a></li>
+	{% for link, title, sprite in def.links %}
+		<li><a href="{{link}}"><i class="fa {{sprite}} fa-2x"></i><span>{{title or link}}</span></a></li>
+	{% endfor %}
 </ul>
 {% endblock %}
