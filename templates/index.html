@@ -4,13 +4,14 @@
 {% extends 'layout.html' %}
 {% block container %}
 <img class="title-img" src="http://i.imgur.com/PZCJuuA.png"/>
-<span class="title">
-	Robin Hübner - profan
-</span>
+<h1 class="title">Robin Hübner - profan</h1>
 <p class="personal-desc">Currently a BS Computer Science student at Stockholm University, interested in natural language processing, game development and artificial intelligence.</p>
 <ul class="item-list links">
 	{% for link, title, sprite in def.links %}
 		<li><a href="{{link}}"><i class="fa {{sprite}} fa-2x"></i><span>{{title or link}}</span></a></li>
 	{% endfor %}
 </ul>
+<div class="divider"></div>
+<h1 class="title" style="margin-top: 5px; margin-bottom: 15px;" >Games</h1>
+<iframe frameborder="0" src="https://itch.io/embed/201662?border_width=0&amp;bg_color=1a1a1a&amp;fg_color=eeeeee&amp;link_color=fa5c5c&amp;border_color=363636" width="550" height="165"></iframe>
 {% endblock %}
